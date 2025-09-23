@@ -1,0 +1,138 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(135deg, #74ebd5, #ACB6E5);
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+main {
+  padding: 2rem 1rem;
+}
+
+h1 {
+  color: #ffffc7;
+  margin-bottom: 1rem;
+}
+
+.container {
+  height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container.hide {
+  display: none;
+}
+
+.game {
+  height: 60vmin;
+  width: 60vmin;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5vmin;
+}
+
+.box {
+  height: 18vmin;
+  width: 18vmin;
+  border-radius: 1rem;
+  border: none;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.6);
+  font-size: 8vmin;
+  color: #b0313e;
+  background-color: #ffffc7;
+  transition: background 0.2s, transform 0.1s;
+}
+
+.box:hover {
+  background-color: #f9e4b8;
+  cursor: pointer;
+}
+
+.box:active {
+  transform: scale(0.95);
+}
+
+.winner {
+  background-color: #7CFC00 !important;
+  color: #191913;
+}
+
+#reset-btn,
+#new-btn {
+  padding: 1rem;
+  font-size: 1.25rem;
+  background-color: #191913;
+  color: #fff;
+  border-radius: 1rem;
+  border: none;
+  margin-top: 1rem;
+  cursor: pointer;
+}
+
+#reset-btn:hover,
+#new-btn:hover {
+  background-color: #b0313e;
+}
+
+#msg {
+  color: #ffffc7;
+  font-size: 5vmin;
+}
+
+.msg-container {
+  height: 100vmin;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+.hide {
+  display: none;
+}
+
+.mode-container {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+.mode-container button {
+  padding: 1rem;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 1rem;
+  background-color: #191913;
+  color: white;
+  cursor: pointer;
+}
+
+.mode-container button:hover {
+  background-color: #b0313e;
+}
+
+@media (max-width: 500px) {
+  .box {
+    font-size: 10vmin;
+  }
+
+  #msg {
+    font-size: 4vmin;
+  }
+
+  .mode-container button {
+    font-size: 1rem;
+    padding: 0.8rem;
+  }
+}
